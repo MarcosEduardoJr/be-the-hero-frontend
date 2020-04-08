@@ -26,7 +26,9 @@ export default function Register() {
 
       alert(`Seu Id de acesso: ${response.data.id}`);
       history.push("/");
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
@@ -48,31 +50,31 @@ export default function Register() {
           <input
             placeholder="Nome da ONG"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
             placeholder="E-mail"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <input
             placeholder="Whatsapp"
             value={whatsapp}
-            onChange={e => setWhatsapp(e.target.value)}
+            onChange={(e) => setWhatsapp(e.target.value)}
           />
 
           <div className="input-group">
             <input
               placeholder="Cidade"
               value={city}
-              onChange={e => setCity(e.target.value)}
+              onChange={(e) => setCity(e.target.value)}
             />
             <input
               placeholder="UF"
               value={uf}
-              onChange={e => setUf(e.target.value)}
+              onChange={(e) => setUf(e.target.value)}
               style={{ width: 80 }}
             />
           </div>
